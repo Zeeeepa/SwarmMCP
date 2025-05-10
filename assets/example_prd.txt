@@ -1,0 +1,39 @@
+# [Agency Name]
+
+---
+
+- **Purpose:** [A high-level description of what the agency aims to achieve, its target market, and the value it offers to its clients.]
+- **Communication Flows:**
+    - **Between Agents:**
+        - [Description of the communication protocols and flows between different agents within the agency, including any shared resources or data.]
+        - **Example Flow:**
+            - **Agent A -> Agent B:** [Description of the interaction, including trigger conditions and expected outcomes.]
+            - **Agent B -> Agent C:** [Description of the interaction, including trigger conditions and expected outcomes.]
+    - **Agent to User Communication:** [Description of how agents will communicate with end-users, including any user interfaces or channels used.]
+- **Data for testing**:
+    
+    []()
+    
+
+---
+
+## Agent Name
+
+### **Role within the Agency**
+
+[Description of the agent's specific role and responsibilities within the agency.]
+
+## Knowledge
+
+[]()
+
+### Tools
+
+- **ToolName:**
+    - **Description**: [Description on what this tool should do and how it will be used]
+    - **Inputs**:
+        - [name] (type) - description
+    - **Validation**:
+        - [Condition] - description
+    - **Core Functions:** [List of the main functions the tool must perform.]
+    - **APIs**:
