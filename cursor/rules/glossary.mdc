@@ -1,0 +1,20 @@
+---
+description: Glossary of other Cursor rules
+globs: **/*
+alwaysApply: true
+---
+
+# Glossary of Task Master Cursor Rules
+
+This file provides a quick reference to the purpose of each rule file located in the `.cursor/rules` directory.
+
+- **[`agency_swarm.mdc`](mdc:.cursor/rules/agency_swarm.mdc)**: Planning and task breakdown protocol for all agency-swarm framework-powered projects.
+- **[`cursor_rules.mdc`](mdc:.cursor/rules/cursor_rules.mdc)**: Guidelines for creating and maintaining Cursor rules to ensure consistency and effectiveness.
+- **[`dependencies.mdc`](mdc:.cursor/rules/dependencies.mdc)**: Guidelines for managing task dependencies and relationships.
+- **[`dev_workflow.mdc`](mdc:.cursor/rules/dev_workflow.mdc)**: Guide for using Task Master to manage task-driven development workflows (integrates Agency Swarm context).
+- **[`glossary.mdc`](mdc:.cursor/rules/glossary.mdc)**: This file; provides a glossary of other Cursor rules.
+- **[`self_improve.mdc`](mdc:.cursor/rules/self_improve.mdc)**: Guidelines for continuously improving Cursor rules based on emerging code patterns and best practices.
+- **[`taskmaster.mdc`](mdc:.cursor/rules/taskmaster.mdc)**: Comprehensive reference for Taskmaster MCP tools and CLI commands.
+- **[`tasks.mdc`](mdc:.cursor/rules/tasks.mdc)**: Guidelines for implementing task management operations.
+- **[`tests.mdc`](mdc:.cursor/rules/tests.mdc)**: Guidelines for implementing and maintaining tests.
+
