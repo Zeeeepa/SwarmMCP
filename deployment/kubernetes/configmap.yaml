@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: unified-mcp-server-config
+data:
+  config.json: |
+    {
+      "server": {
+        "port": 3000,
+        "host": "0.0.0.0",
+        "cors": {
+          "origin": "*",
+          "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+          "allowedHeaders": ["Content-Type", "Authorization"]
+        }
+      },
+      "logging": {
+        "level": "info",
+        "format": "json",
+        "destination": "stdout"
+      },
+      "monitoring": {
+        "enabled": true,
+        "metrics": {
+          "enabled": true,
+          "path": "/metrics"
+        }
+      }
+    }
+
