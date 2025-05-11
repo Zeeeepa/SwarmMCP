@@ -1,0 +1,43 @@
+# Elasticsearch configuration for Unified MCP Server
+
+cluster.name: "unified-mcp-elasticsearch"
+network.host: 0.0.0.0
+
+# Minimum master nodes to prevent split brain
+discovery.zen.minimum_master_nodes: 1
+
+# Enable X-Pack security
+xpack.security.enabled: true
+
+# Enable X-Pack monitoring
+xpack.monitoring.enabled: true
+
+# Enable X-Pack watcher
+xpack.watcher.enabled: true
+
+# Enable X-Pack machine learning
+xpack.ml.enabled: true
+
+# Enable X-Pack graph
+xpack.graph.enabled: true
+
+# Enable X-Pack SQL
+xpack.sql.enabled: true
+
+# Enable X-Pack rollup
+xpack.rollup.enabled: true
+
+# Enable X-Pack index lifecycle management
+xpack.ilm.enabled: true
+
+# Set path for data and logs
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+
+# Set bootstrap memory lock
+bootstrap.memory_lock: true
+
+# Set JVM options
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  unified-mcp-server:
+    build:
+      context: ../../
+      dockerfile: deployment/docker/Dockerfile
+      target: swarmmcp-build  # Use the build stage for development
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - LOG_LEVEL=debug
+    volumes:
+      # Mount source code for hot reloading
+      - ../../serv:/app/serv
+      - ../../swarmmcp:/app/swarmmcp
+      - mcp-logs:/app/logs
+      - mcp-data:/app/data
+    command: npm run dev
+    restart: unless-stopped
+
+volumes:
+  mcp-logs:
+  mcp-data:
+

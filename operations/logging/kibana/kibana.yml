@@ -1,0 +1,32 @@
+# Kibana configuration for Unified MCP Server
+
+server.name: kibana
+server.host: "0.0.0.0"
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+
+# X-Pack security
+xpack.security.enabled: true
+elasticsearch.username: kibana_system
+elasticsearch.password: ${KIBANA_PASSWORD}
+
+# X-Pack monitoring
+xpack.monitoring.enabled: true
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+# X-Pack reporting
+xpack.reporting.enabled: true
+xpack.reporting.capture.browser.chromium.disableSandbox: true
+
+# X-Pack spaces
+xpack.spaces.enabled: true
+
+# X-Pack APM
+xpack.apm.enabled: true
+xpack.apm.ui.enabled: true
+
+# X-Pack graph
+xpack.graph.enabled: true
+
+# X-Pack machine learning
+xpack.ml.enabled: true
+

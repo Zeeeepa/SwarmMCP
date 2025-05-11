@@ -1,0 +1,48 @@
+groups:
+  - name: unified-mcp-server
+    rules:
+      - alert: HighRequestLatency
+        expr: http_request_duration_seconds{quantile="0.9"} > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High request latency"
+          description: "90th percentile of request latency is above 1s for 5m"
+
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error rate"
+          description: "Error rate is above 10% for 5m"
+
+      - alert: HighCPUUsage
+        expr: process_cpu_seconds_total{job="unified-mcp-server"} > 0.8
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage"
+          description: "CPU usage is above 80% for 5m"
+
+      - alert: HighMemoryUsage
+        expr: process_resident_memory_bytes{job="unified-mcp-server"} / node_memory_MemTotal_bytes > 0.8
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is above 80% for 5m"
+
+      - alert: InstanceDown
+        expr: up{job="unified-mcp-server"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance down"
+          description: "Instance {{ $labels.instance }} is down"
+
