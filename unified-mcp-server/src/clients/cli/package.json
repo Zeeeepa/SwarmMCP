@@ -1,0 +1,31 @@
+{
+  "name": "unified-mcp-cli",
+  "version": "0.1.0",
+  "description": "Command-line interface for the Unified MCP Server",
+  "main": "unified-mcp-cli.js",
+  "bin": {
+    "unified-mcp": "./unified-mcp-cli.js"
+  },
+  "scripts": {
+    "start": "node unified-mcp-cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "cli",
+    "ai",
+    "agent",
+    "task-management"
+  ],
+  "author": "Zambe",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
